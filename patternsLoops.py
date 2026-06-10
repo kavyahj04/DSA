@@ -112,7 +112,7 @@ def pattern12(n):
             print(str(num),  end = "")
         print("")
 
-def pattern13(n):
+def pattern12B(n):
     for i in range(n):
         num = 1
         for j in range(i + 1):
@@ -126,5 +126,52 @@ def pattern13(n):
             
         print("")
 
+def pattern13(n):
+    num = 1
+    for i in range(n):
+        for j in range(i + 1):
+            print(str(num) + " ", end = "")
+            num += 1
+        print("")
+
+def pattern14(n):
+    for i in range(n):
+        char_num = ord('A')
+        for j in range(i+1):
+            print(chr(char_num), end = "")
+            char_num += 1
+        print("")
+
+def pattern15(n):
+    for i in range(n):
+        cn = ord('A')
+        for j in range(n - i):
+            print(chr(cn) + " ", end = "")
+            cn += 1
+        print("")     
+
+def pattern16(n):
+    cn = ord('A')
+    for i in range(n):
+        for j in range(i+1):
+            print(chr(cn) + " ", end = "")
+        cn += 1
+        print("")   
+
+def pattern17(n):
+    for i in range(n):
+        cn = ord('A')
+        for j in range(n - i - 1):
+           print(" ", end = "")
+        for k in range(2 * i + 1):
+            print(chr(cn), end = "")
+            if k < i :
+                cn += 1
+            else:
+                cn -= 1
+        for l in range(n - i - 1):
+            print(" ", end = "")
+        print("")
+
 num = int(input())
-pattern13(num)
+pattern17(num)
