@@ -173,5 +173,68 @@ def pattern17(n):
             print(" ", end = "")
         print("")
 
+def pattern18(n):
+    for i in range(n):
+        cn = ord('E')
+        cn = cn - i
+        for j in range(i + 1):
+            print(chr(cn), end = "")
+            cn += 1
+        print("")
+
+def pattern19(n):
+    for i in range(n):
+        for j in range(n - i):
+            print("*", end = "")
+        for k in range(2* i):
+            print(" ", end = "")
+        for l in range(n - i):
+            print("*", end = "")
+        print("")
+    for i in range(n):
+        for j in range(i + 1):
+            print("*", end = "")
+        for k in range((2 * n) - (2 * (i + 1))):
+            print(" ", end = "")
+        for l in range(i + 1):
+            print("*", end = "")
+        print("")
+
+def pattern20(n):
+    for i in range(n - 1):
+        for j in range(i + 1):
+            print("*", end = "")
+        for k in range( (2 * n) - 2 * (i + 1)):
+            print(" ", end = "")
+        for l in range(i + 1):
+            print("*", end = "")
+        print("")
+    for i in range(n):
+        for j in range(n - i):
+            print("*", end = "")
+        for k in range( 2 * i):
+            print(" ", end = "")
+        for l in range(n - i):
+            print("*", end = "")
+        print("")
+
+def pattern21(n):
+    for i in range(n):
+        for j in range(n):
+            if (i == 0 or j == 0 or i == n -1 or j == n - 1):
+                print("*", end = "")
+            else:
+                print(" ", end = "")
+        print("")
+
+def pattern22(n):
+    for i in range(2*n - 1):
+        for j in range(2*n - 1):
+            top = i
+            left = j
+            down = (2 * n - 2) - i
+            right = (2 * n - 2) - j
+            print(n - min(min(top, down), min(left, right)), end = "")
+        print("")
 num = int(input())
-pattern17(num)
+pattern22(num)
