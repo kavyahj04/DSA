@@ -14,4 +14,5 @@ def isPrime(n):
         return False
         
 
-isPrime(7)
+num = int(input())
+isPrime(num)
