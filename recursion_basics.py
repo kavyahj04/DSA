@@ -114,5 +114,15 @@ def palindrome(i, s, n):
         return False
     palindrome(i + 1, s, n)
 
-name = "KavyaayvaKL"
-palindrome(0, name, len(name))
+# name = "KavyaayvaKL"
+# palindrome(0, name, len(name))
+
+
+## Multiple Recursion Calls
+def fib(n):
+    if n <= 1:
+        return n 
+    return fib(n-1) + fib(n-2)
+
+f = fib(3)
+print(fib(3))
