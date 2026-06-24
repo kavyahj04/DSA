@@ -38,6 +38,7 @@ def bubbleSort(arr):
 # arr = [12, 3, 145, 23, 0, 56, 7]
 # bubbleSort(arr)
 
+# Insertion Sort 
 
 def insertionSort(arr):
     for i in range(len(arr)):
@@ -50,5 +51,7 @@ def insertionSort(arr):
     print(f"Insertion sort - {arr}")
     return arr
 
-arr = [12, 3, 145, 23, 0, 56, 7]
-insertionSort(arr)
+# arr = [12, 3, 145, 23, 0, 56, 7]
+# insertionSort(arr)
+
+
