@@ -43,7 +43,7 @@ def rotateArrayByD(arr, d):
     print(arr)
     return arr
 
-rotateArrayByD([1,2,3,4,5,6], 7)
+# rotateArrayByD([1,2,3,4,5,6], 7)
 
 
 # T(n)
@@ -65,3 +65,25 @@ rotateArrayByD([1,2,3,4,5,6], 7)
 
 
 
+# Optimal Solution 
+
+def rotateKarrayOptimal(arr, d):
+    n = len(arr)
+    d = d % n
+    arr = reverseArray(arr, 0, d-1)
+    arr = reverseArray(arr, d, n-1)
+    arr = reverseArray(arr, 0, n-1)
+    print(arr)
+    return arr
+
+
+def reverseArray(arr, left, right):
+    while left <= right:
+        arr[left], arr[right] = arr[right], arr[left]
+        left += 1
+        right -=1 
+    print(arr)
+    return arr
+
+
+rotateKarrayOptimal([1,2,3,4,5,6,7], 15)
