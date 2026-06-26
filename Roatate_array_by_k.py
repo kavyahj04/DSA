@@ -69,10 +69,10 @@ def rotateArrayByD(arr, d):
 
 def rotateKarrayOptimal(arr, d):
     n = len(arr)
-    d = d % n
-    arr = reverseArray(arr, 0, d-1)
-    arr = reverseArray(arr, d, n-1)
-    arr = reverseArray(arr, 0, n-1)
+    d = d % n # O(1)
+    arr = reverseArray(arr, 0, d-1) # O(d/2) → O(d)
+    arr = reverseArray(arr, d, n-1) # O((n-d)/2) → O(n-d)
+    arr = reverseArray(arr, 0, n-1) # O(n/2) → O(n)
     print(arr)
     return arr
 
@@ -87,3 +87,15 @@ def reverseArray(arr, left, right):
 
 
 rotateKarrayOptimal([1,2,3,4,5,6,7], 15)
+
+# Time Complexity 
+# Total = O(d) + O(n-d) + O(n)
+
+# = O(d + n - d + n)
+
+# = O(2n)
+
+# = O(n)
+
+# Space: O(1) — no extra memory, all swaps done in-place (unlike the brute force which used a temp array of size d).
+
