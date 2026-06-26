@@ -76,3 +76,8 @@ def intersection(arr1, arr2):
     return temp
 
 intersection([1,1,2,2,3,4,5], [1,1,2,2,7,8])
+
+# complexity
+
+# Time	O(m+n)
+# Space	O(min(m,n)) — output only
