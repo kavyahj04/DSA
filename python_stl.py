@@ -1,3 +1,3 @@
-names = ["Alex", "Bobby", "Chandler"]
+secondlargest.pynames = ["Alex", "Bobby", "Chandler"]
 names.append("Duke")
 print(-123 % 10)
