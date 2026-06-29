@@ -13,6 +13,8 @@ def findBF(arr):
             print(i)
             return i
 
+
+
 findBF([7,5,8,6,3])
 
 def findExor(arr):
