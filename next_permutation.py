@@ -6,7 +6,7 @@ def nextPermutation(arr):
             break
     
     if idx == -1:
-        reversed(arr)
+        arr[:] = arr[:: -1]
     
     for i in range(len(arr) -1, idx+1, -1):
         if arr[i] > arr[idx]:
@@ -16,7 +16,11 @@ def nextPermutation(arr):
     arr[idx + 1:] = arr[idx + 1:][:: -1]
     print(arr)
     return arr
-arr = [1, 5, 4, 3, 2]
+arr = [2, 1]
 nextPermutation(arr)
+
+arr = [3, 2, 1]
+reversed(arr)
+print(arr)
     
     
