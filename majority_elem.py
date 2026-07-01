@@ -9,7 +9,7 @@ def majorityElem1(arr):
         for j in range(len(arr)):
             if arr[j] == arr[i]:
                 count += 1
-        if count >= n:
+        if count > n:
             print(arr[i])
             return arr[i]
     print(-1)
@@ -33,7 +33,7 @@ def majorityElem2(arr):
         nums[arr[i]] = nums.get(arr[i], 0) + 1
     
     for key, val in nums.items():
-        if val >= n :
+        if val > n :
             print(key)
             return key
     print(-1)
@@ -70,7 +70,7 @@ def majority3(arr):
     for i in range(len(arr)):
         if arr[i] == el:
             count += 1
-    if count >= n:
+    if count > n:
         print(el)
         return el
     print(-1)
