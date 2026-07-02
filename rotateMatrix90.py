@@ -19,3 +19,23 @@ rotate(matrix)
 
 # Space Complexity - O(n ** 2)
 
+def rotate2(matrix):
+    rows = len(matrix)
+    cols = len(matrix[0])
+    for i in range(0, rows-1):
+        for j in range(i + 1, cols):
+            matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+    
+    for i in range(rows):
+        reverse(matrix[i])
+    print(matrix)
+
+def reverse(arr):
+    left = 0
+    right = len(arr) - 1
+    while left <= right:
+        arr[left], arr[right] = arr[right], arr[left]
+        left += 1
+        right -= 1
+
+rotate2(matrix)
