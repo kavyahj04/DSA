@@ -35,4 +35,14 @@ def pascal2Optimal(row):
     # print(1)
 
 
-pascal2Optimal(5)
+# pascal2Optimal(5)
+
+
+# Print all elements 
+
+
+
+
+
+
+
