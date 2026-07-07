@@ -21,4 +21,20 @@ def majority1(arr):
                 print(ls)
                 return ls
 arr = [1,1,1,3,3,2,2,2]
-majority1(arr)
+# majority1(arr)
+
+
+# Better - Hashing 
+
+def majority2(arr):
+    nums = {}
+    mn = len(arr) // 3
+    ls = []
+    for i in range(len(arr)):
+        nums[arr[i]] = 1 + nums.get(arr[i], 0)
+        if nums[arr[i]] > mn:
+            ls.append(arr[i])
+    print(ls)
+    return ls
+
+majority2(arr)
