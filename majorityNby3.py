@@ -37,4 +37,43 @@ def majority2(arr):
     print(ls)
     return ls
 
-majority2(arr)
+# majority2(arr)
+
+# Optimal - Moore's algo
+
+def majority3(arr):
+    cnt1, cnt2 = 0, 0
+    el1, el2 = float('-inf'), float('-inf')
+    ls = []
+    mn = len(arr) // 3
+    for i in range(len(arr)):
+        if cnt1 == 0 and arr[i] != el2:
+            cnt1 += 1
+            el1 = arr[i]
+        elif cnt2 == 0 and arr[i] != el1:
+            cnt2 += 1
+            el2 = arr[i]
+        elif el1 == arr[i]:
+            cnt1 += 1
+        elif el2 == arr[i]:
+            cnt2 += 1
+        else:
+            cnt1 -= 1
+            cnt2 -= 1
+    print(el1, el2)
+
+    # Manual Check 
+    cnt1, cnt2 = 0, 0
+    for i in range(len(arr)):
+        if arr[i] == el1:
+            cnt1 += 1
+        elif arr[i] == el2:
+            cnt2 += 1
+    if cnt1 > mn:
+        ls.append(el1)
+    if cnt2 > mn:
+        ls.append(el2)
+    print(ls)
+    return ls
+
+majority3(arr)
