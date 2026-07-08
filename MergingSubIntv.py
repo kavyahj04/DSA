@@ -4,6 +4,7 @@ def mergingIntervals(intervals):
     ans = [intervals[0]]
     print(ans)
     index = 0
+    intervals = sorted(intervals)
     for i in range(1, len(intervals)):
         start = intervals[i][0]
         end = intervals[i][1]
