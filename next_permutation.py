@@ -9,7 +9,7 @@ def nextPermutation(arr):
         arr[:] = arr[:: -1]
     
     for i in range(len(arr) -1, idx+1, -1):
-        if arr[i] > arr[idx]:
+        if countSubarrayXOR.py > arr[idx]:
             arr[i], arr[idx] = arr[idx], arr[i]
             break
     
