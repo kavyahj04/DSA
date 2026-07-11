@@ -1,11 +1,13 @@
 def removeDupFromSorted(arr):
-    sorted_arr = set(arr)
+    sorted_arr = sorted(set(arr))
     len_arr = len(sorted_arr)
     arr[:len_arr] = sorted_arr
     print(arr)
     return arr
 
 removeDupFromSorted([1,1,2,2,3,3,4,4])
+
+# T - O(N LOG N) + O(N)
         
 def removeDupFromPointers(arr):
     k = 0
@@ -18,3 +20,5 @@ def removeDupFromPointers(arr):
     return arr
 
 removeDupFromPointers([1,1,2,2,3,3,4,4])
+
+# T - O(N)

@@ -10,6 +10,7 @@ def secondLargestBruteForce(arr):
             print(arr[i])
             return arr[i]
 
+# T - O(N log N) + O(N)
 
 def quickSort(arr, low, high):
     if low < high:
@@ -57,4 +58,6 @@ def secondLargest(arr):
 
 
 secondLargest([1,3,44,55,666,2,3,99,55,66,22,33,33,123,752])
+
+# T - O(N)
 
