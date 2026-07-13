@@ -5,7 +5,7 @@ def sort(nums):
     mid = 0
     high = len(nums) - 1
 
-    while m <= h:
+    while mid <= high:
         if nums[mid] == 0:
             nums[low], nums[mid] = nums[mid], nums[low]
             low += 1
