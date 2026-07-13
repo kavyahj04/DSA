@@ -8,3 +8,5 @@ def largestElement(arr):
     return largest
 
 largestElement([9,456,7,3,5,11,2,56])
+
+# T - O(n)

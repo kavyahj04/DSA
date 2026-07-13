@@ -1,3 +1,21 @@
+# BFA
+def longestSubArrBFA(arr, k):
+    max_ = float('-inf')
+    for i in range(len(arr)):
+        sum_ = 0
+        for j in range(i, len(arr)):
+            sum_ += arr[j]
+            if sum_ == k:
+                max_ = max(max_, j - i + 1)
+    print(max_)
+    return max_
+            
+arr = [2, 1, 3, 1, 2, 4, 1]
+k = 6
+
+longestSubArrBFA(arr, k)
+
+# Better approach
 def longestSubarray(arr, k):
     maxLen = 0
     prefixSum = {0 : -1}
@@ -32,12 +50,14 @@ def longestSubarrayOptimal(arr, k):
         
         if r < n:
             sum_ += arr[r]
-        if sum_ == k:
-            maxLen = max(maxLen, r - l + 1)
+        
             
         while l <= r and sum_ > k:
             sum_ -= arr[l]
             l += 1
+        
+        if sum_ == k:
+            maxLen = max(maxLen, r - l + 1)
         
         
         r += 1
