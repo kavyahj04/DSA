@@ -4,7 +4,8 @@ def rotate(matrix):
     rows = len(matrix)
     cols = len(matrix[0])
 
-    matrix2 = [[0] * rows for _ in range(rows)]
+    # rows × cols becomes cols × rows
+    matrix2 = [[0] * rows for _ in range(cols)]
 
     for i in range(rows):
         for j in range(cols):

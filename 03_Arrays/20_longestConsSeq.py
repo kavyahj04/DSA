@@ -54,7 +54,6 @@ longestSeq2(arr)
 # optimal 
 
 def longestSeq3(arr):
-    
     nums = set(arr)
     longest = 0
     for n in nums:

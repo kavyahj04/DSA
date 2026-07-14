@@ -52,7 +52,7 @@ def makeZeroes2(matrix):
     for i in range(rows):
         for j in range(cols):
             if rowArr[i] == 1 or colArr[j] == 1:
-                matrix[i][j] == 0
+                matrix[i][j] = 0
     print(matrix)
     return matrix
 
