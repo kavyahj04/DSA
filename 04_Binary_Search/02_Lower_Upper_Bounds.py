@@ -16,6 +16,7 @@ nums = [-1,0,3,5,9,12]
 x = 9
 lowerBound(nums, x)
 
+# upper bound - arr[i] > x
 def upperBound(nums, x):
     l, h = 0, len(nums) - 1
     ans = nums[-1] + 1
