@@ -97,9 +97,13 @@ class FindOccurences:
   
 occ = FindOccurences()
 nums = [5,7,7,8,8,10] 
-target = 12
+target = 7
 occ.findOcc(nums, target)
 occ.findOccBound(nums, target)
-occ.findOccBinarySearch(nums, target)
+elements = occ.findOccBinarySearch(nums, target)
+if elements[0] != -1:
+    print(f"Count of Occurences are - {elements[1] - elements[0] + 1}")
+else:
+    print(f"Count of Occurences are - 0")
 
 
