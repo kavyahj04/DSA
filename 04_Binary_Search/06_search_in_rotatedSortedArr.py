@@ -28,4 +28,6 @@ target = 6
 search = SeachElement(nums, target)
 search.searchInSorted(search.nums, search.target)
 
+# T(n) - O(n)
+
 
