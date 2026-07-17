@@ -16,3 +16,5 @@ class FindPeakElement:
 nums = [1,2,1,3,5,6,4]
 element = FindPeakElement()
 element.findElement(nums)
+
+# T(n) - O(logn)
