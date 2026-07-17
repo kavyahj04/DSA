@@ -9,7 +9,7 @@ class FindPeakElement:
         elif nums[len(nums) - 1] > nums[len(nums) - 2]:
             print(f"Found peak element at index {len(nums) - 1} and num is {nums[len(nums) - 1]}")
             return nums[len(nums) - 1]
-        l, r = 0, len(nums) - 1
+        l, r = 1, len(nums) - 2
         while l < r:
             m = (l + r) // 2
             if nums[m] > nums[m - 1] and nums[m] > nums[m + 1]:
