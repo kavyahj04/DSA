@@ -28,3 +28,15 @@ arr = [0,3,4,7,10,9]
 k = 4
 
 aggressiveCowsLinear(arr, k)
+
+def aggressiveCows(stalls, cows):
+    stallMax = max(stalls)
+    stalls = sorted(stalls)
+    low, high = 1, stallMax
+    while low <= high:
+        mid = (low + high) // 2
+        if canWePlaceCow(stalls, dist, cows):
+            low = mid + 1
+        else:
+            high = mid - 1
+        return high
