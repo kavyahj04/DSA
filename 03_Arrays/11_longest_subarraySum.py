@@ -47,22 +47,14 @@ def longestSubarrayOptimal(arr, k):
     n = len(arr)
     maxLen = 0
     while l < n and r < n:
-        
         if r < n:
             sum_ += arr[r]
-        
-            
         while l <= r and sum_ > k:
             sum_ -= arr[l]
             l += 1
-        
         if sum_ == k:
             maxLen = max(maxLen, r - l + 1)
-        
-        
         r += 1
-        
-        
     print(maxLen)
     return maxLen
 
