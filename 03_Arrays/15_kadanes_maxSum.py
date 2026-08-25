@@ -41,7 +41,6 @@ def maxSum3(arr):
     sum_ = 0
     for i in range(len(arr)):
         sum_ += arr[i]
-
         if sum_ > maxS:
             maxS = sum_
         if sum_ < 0:
