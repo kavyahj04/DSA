@@ -7,6 +7,7 @@ def nextPermutation(arr):
     
     if idx == -1:
         arr[:] = arr[:: -1]
+        return arr
     
     for i in range(len(arr) -1, idx+1, -1):
         if arr[i] > arr[idx]:
