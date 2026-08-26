@@ -25,16 +25,18 @@ rearrange(arr)
 
 def rearrange2(arr):
     pos, neg = 0, 1
+    new_arr = [0] * len(arr)
     for i in range(len(arr)):
         if arr[i] > 0:
-            arr[pos] = arr[i]
+            new_arr[pos] = arr[i]
             pos += 2
         else:
-            arr[neg] = arr[i]
+            new_arr[neg] = arr[i]
             neg += 2
-    print(arr)
-    return arr
+    print(new_arr)
+    return new_arr
 
+arr = [3,1,2,-1,-2,-8]
 rearrange2(arr)
 
 # When elements are not equal
