@@ -38,8 +38,6 @@ def pascal2Optimal(row):
 # pascal2Optimal(5)
 
 
-# Print all elements 
-
 
 
 
