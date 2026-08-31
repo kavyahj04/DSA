@@ -30,6 +30,21 @@ removeOuterP(s)
 # O(n)
 
 
+# Optimal solution 
+
+def removeOuterParentheses(self, s: str) -> str:
+        c=0
+        res=[]
+        for i in s:
+            if i=="(":
+                if c>0:
+                    res.append(i)
+                c+=1
+            else:
+                c-=1
+                if c>0:
+                    res.append(i)
+        return "".join(res)
 
 
 
