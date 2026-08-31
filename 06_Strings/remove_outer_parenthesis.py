@@ -11,7 +11,6 @@ def removeOuterP(s):
         elif count == 0 and os:
             new.append(s[outer + 1 :i])
             os = False
-            continue
         else:
             outer = i
             os = True
@@ -19,6 +18,16 @@ def removeOuterP(s):
 
 s = "(()())(())(()(()))"
 removeOuterP(s)
+
+# Time and space comeplexity
+
+# Time 
+
+# O(n) overall. Small correction on the reasoning: each individual slice isn't constant-length, but the slices never overlap — every character in s belongs to at most one slice. So their lengths sum to at most n across the whole loop, not n per iteration. That's why it's O(n) total
+
+# Space 
+
+# O(n)
 
 
 
