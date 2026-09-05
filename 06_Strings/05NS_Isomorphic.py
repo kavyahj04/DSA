@@ -1,20 +1,16 @@
 def isomorphic(s, t):
-    strs = {}
     if len(s) != len(t):
-        return false
-
-    for i in range(len(s)):
-        if s[i] in strs and strs[s[i]] != t[i]:
-            print(False)
             return False
-        strs[s[i]] = t[i]
-    print(strs)
-    print(True)
-    return True
-    
+
+    s2t, t2s = {}, {}
+
+    for char_s, char_t in zip(s, t):
+        # Check if mapping conflicts in either direction
+        if (char_s in s2t and s2t[char_s] != char_t) or \
+            (char_t in t2s and t2s[char_t] != char_s):
+            return False
             
-
-s = "paper"
-t = "title"
-
+        s2t[char_s] = char_t
+        t2s[char_t] = char_s
+    return True
 isomorphic(s, t)
