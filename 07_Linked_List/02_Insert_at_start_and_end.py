@@ -51,3 +51,5 @@ def InsertAtEnd(head, num):
 
     
 InsertAtEnd(head, 1)
+
+# T(n) - O(n)
