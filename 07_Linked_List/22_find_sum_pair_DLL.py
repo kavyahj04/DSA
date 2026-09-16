@@ -19,12 +19,6 @@ def findSumPair(head, s):
     print(pairs)
 
 
-
-
-
-
-
-
 class Node:
     def __init__(self, val, next = None, prev = None):
         self.val = val
