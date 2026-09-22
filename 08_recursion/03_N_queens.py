@@ -32,5 +32,3 @@ class Solution:
             return all_sol
         backtrack(0)
         return all_sol
-
-            
