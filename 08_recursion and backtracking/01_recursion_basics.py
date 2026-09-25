@@ -113,3 +113,11 @@ def palindrome(s, i):
 
 palindrome("aba", 0)
 
+
+# recursion - fibonnaci
+
+def fib(n):
+    if n <= 1:
+        return n
+    return f(n-1)+ f(n - 2)
+
