@@ -4,12 +4,14 @@ def nextPermutation(arr):
         if arr[i] < arr[i + 1]:
             idx = i
             break
+
+    # A descending sequence represents the largest possible permutation for those specific elements. You cannot make [5, 4, 3, 1] any larger without changing the digit that comes before it.
     
     if idx == -1:
         arr[:] = arr[:: -1]
         return arr
     
-    for i in range(len(arr) -1, idx+1, -1):
+    for i in range(len(arr) -1, idx, -1):
         if arr[i] > arr[idx]:
             arr[i], arr[idx] = arr[idx], arr[i]
             break
