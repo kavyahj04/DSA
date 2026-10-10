@@ -36,7 +36,20 @@ def pascal2Optimal(row):
 
 
 # pascal2Optimal(5)
+def generate(self, numRows: int) -> list[list[int]]:
+    nums = [[1], [1,1], [1,2,1]]
 
+    if numRows <= len(nums):
+        return nums[:numRows]
+
+    for i in range(3, numRows):
+        arr = [1]
+        top_arr = nums[i-1]
+        for j in range(1, i):
+            arr.append(top_arr[j-1]+top_arr[j])
+        arr.append(1)
+        nums.append(arr)
+    return nums
 
 
 
