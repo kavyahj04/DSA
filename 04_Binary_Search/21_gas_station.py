@@ -8,7 +8,7 @@ def minimizeMaxDist(arr, k):
             secL = diff / (howmanyPlaced[j] + 1)
             if maxV < secL:
                 maxV = secL
-                maxI = i
+                maxI = j
         howmanyPlaced[maxI] += 1
     maxAns = -1
     for i in range(len(arr)-1):
