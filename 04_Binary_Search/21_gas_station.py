@@ -21,3 +21,27 @@ def minimizeMaxDist(arr, k):
 arr = [1,2,3,4,5]
 k = 4
 minimizeMaxDist(arr, k)
+
+
+## Binary Search Soultion
+
+def minimizeDistBS(arr, k):
+    def cntK(dist):
+        val = 0
+        for i in range(len(arr)-1):
+            num_in_btwn = int((arr[i+1]-arr[i]) / dist)
+            if (arr[i+1]-arr[i]) % dist == 0:
+                val -= 1
+            val += num_in_btwn
+        return val
+    l = 0
+    h = -1
+    for i in range(len(arr) - 1):
+        h = max(h, (arr[i+1]-arr[i]))
+    while h - l > 1e-6:
+        m = (l + h) / 2
+        ans = cntK(m)
+        if ans > k:
+            l = m
+        else:
+            h = m
