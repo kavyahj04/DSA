@@ -43,3 +43,23 @@ def getCount(arr):
     return l
 
 searchInSortedOptimal(mat)
+
+def rowWithMax1s(self, arr: list[list[int]]) -> int:
+        # code here
+        maxi = 0
+        maxi_index = -1
+        for i in range(len(arr)):
+            cnt = 0
+            l, h = 0, len(arr[i])-1
+            while l <= h:
+                m = (l + h) // 2
+                if arr[i][m] == 0:
+                    l = m + 1
+                else:
+                    h = m - 1
+
+            cnt = len(arr[i]) - l
+            if cnt > maxi:
+                maxi = cnt
+                maxi_index = i
+        return maxi_index
