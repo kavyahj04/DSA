@@ -63,3 +63,17 @@ class Solution:
         if dummy.next:
                 dummy.next.prev = None
         return dummy.next
+
+class Solution:
+    def deleteAllOccurOfX(self, head, x):
+        curr = head
+        while curr:
+            if curr.data == x:
+                if curr == head:
+                    head = head.next
+                if curr.next:
+                    curr.next.prev = curr.prev
+                if curr.prev:
+                    curr.prev.next = curr.next
+            curr = curr.next
+        return head
