@@ -54,3 +54,24 @@ def print_list(node):
 
 head = removedup(head)
 print_list(head)
+
+#gfg
+
+class Solution:
+    def removeDuplicates(self, headRef):
+        # code here
+        curr = headRef
+        ref = None
+        while curr:
+            if curr.data != ref:
+               ref = curr.data
+            else:
+                if curr.next:
+                    curr.next.prev = curr.prev
+                if curr.prev:
+                    curr.prev.next = curr.next
+            curr = curr.next
+        return headRef
+                
+              
+           

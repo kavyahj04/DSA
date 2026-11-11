@@ -50,22 +50,3 @@ node7.prev = node6
 
 findSumPair(head, 5)
 
-class Solution:
-    def givenSumPairs(self, head, target):
-        # code here
-        left = head
-        right = head
-        out = []
-        while right.next:
-            right = right.next
-        while left and right and left != right and right.next != left:
-            sum_ = left.data + right.data
-            if sum_ == target:
-                out.append([left.data, right.data])
-                left = left.next
-                right = right.prev
-            elif sum_ < target:
-                left = left.next
-            else:
-                right = right.prev
-        return out
