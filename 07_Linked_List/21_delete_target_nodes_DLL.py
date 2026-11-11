@@ -47,3 +47,19 @@ def print_list(node):
 
 head = deleteLinkedList(head, 1)
 print_list(head)
+
+class Solution:
+    def deleteAllOccurOfX(self, head, x):
+        dummy = Node(0)
+        temp = dummy
+        curr = head
+        while curr:
+            if curr.data != x:
+                temp.next = curr
+                curr.prev = temp
+                temp = temp.next
+            curr = curr.next
+        temp.next = None
+        if dummy.next:
+                dummy.next.prev = None
+        return dummy.next
