@@ -74,4 +74,16 @@ class Solution:
         return headRef
                 
               
-           
+class Solution:
+    def removeDuplicates(self, headRef):
+        # code here
+        curr = headRef
+        while curr and curr.next:
+            if curr.data == curr.next.data:
+                nxt = curr.next
+                curr.next = nxt.next
+                if nxt.next:
+                    nxt.next.prev = curr
+            else:
+                curr = curr.next
+        return headRef
