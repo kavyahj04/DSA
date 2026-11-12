@@ -73,7 +73,7 @@ class Solution:
             curr = curr.next
         return headRef
                 
-              
+#Standard approach           
 class Solution:
     def removeDuplicates(self, headRef):
         # code here

@@ -64,3 +64,48 @@ print_list(lst.next)
 head = reversekGrp(lst, 3)
 
 print_list(head)
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def reverseKGroup(self, head: ListNode | None, k: int) -> ListNode | None:
+        if not head or k == 1:
+            return head
+
+        def reverse(start, last):
+            stop = last.next
+            curr, prev = start, None
+            while curr != stop:
+                temp = curr.next
+                curr.next = prev
+                prev = curr
+                curr = temp
+            return prev, start
+
+        curr = head
+        cnt = 0
+        prev_node = None
+        new_head = head
+        group_start = None
+        while curr:
+            cnt += 1
+            if cnt == 1:
+                group_start = curr
+            if cnt == k:
+                next_group = curr.next
+                first, last = reverse(group_start, curr)
+                last.next = next_group
+                if prev_node:
+                    prev_node.next = first
+                else:
+                    new_head = first
+                prev_node = last
+                curr = last.next
+                cnt = 0
+                continue
+            curr = curr.next
+        return new_head
+        
